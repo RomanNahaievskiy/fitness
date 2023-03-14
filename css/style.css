@@ -729,6 +729,7 @@ body {
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
+  row-gap: 30px;
   justify-content: space-between;
   padding-bottom: 50px;
   flex-wrap: wrap;
