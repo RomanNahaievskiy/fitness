@@ -410,6 +410,7 @@ body {
 
 .page {
   padding-top: 65px;
+  padding-bottom: 65px;
 }
 .page__container {
   max-width: 1340px;
@@ -590,6 +591,11 @@ body {
     font-size: 78px;
   }
 }
+@media (max-width: 350px) {
+  .main-title {
+    font-size: 55px;
+  }
+}
 
 .form-main {
   display: flex;
@@ -695,6 +701,11 @@ body {
 }
 .footer-form__title:not(:last-child) {
   margin-bottom: 50px;
+}
+@media (max-width: 350px) {
+  .footer-form__title {
+    font-size: 45px;
+  }
 }
 .footer-form__line {
   display: flex;

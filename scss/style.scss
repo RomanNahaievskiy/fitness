@@ -338,6 +338,7 @@ body {
 //========================================================================================================================================================
 .page {
     padding-top: 65px;
+    padding-bottom: 65px;
     // .page__container
 
     &__container {
@@ -530,6 +531,10 @@ body {
     @media (max-width: 500px) {
         font-size: 78px;
     }
+
+    @media (max-width: 350px) {
+        font-size: 55px;
+    }
 }
 .form-main {
     display: flex;
@@ -669,6 +674,9 @@ body {
         margin: 0 auto;
         &:not(:last-child) {
             margin-bottom: 50px;
+        }
+        @media (max-width: 350px) {
+            font-size: 45px;
         }
     }
 
