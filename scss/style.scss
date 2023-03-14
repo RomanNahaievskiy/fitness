@@ -675,6 +675,10 @@ body {
         column-gap: 20px;
         max-width: 600px;
         margin: 0 auto;
+        @media (max-width: 500px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
     }
 
     // .footer-form__input

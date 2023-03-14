@@ -698,6 +698,12 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+@media (max-width: 500px) {
+  .footer-form__line {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
 .footer-form__input {
   flex: 1 1 auto;
   padding: 17px;
