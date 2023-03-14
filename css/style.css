@@ -502,6 +502,11 @@ body {
   height: 50%;
   bottom: 25%;
 }
+@media (max-width: 767.98px) {
+  .main-section__image {
+    margin-right: 0;
+  }
+}
 
 .text-main {
   font-family: "Circular Std";
