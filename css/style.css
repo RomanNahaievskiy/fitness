@@ -442,6 +442,11 @@ body {
   align-items: center;
   margin: 0 -15px;
 }
+@media (max-width: 400px) {
+  .main-section__columns {
+    flex-direction: column;
+  }
+}
 .main-section__column {
   flex: 0 1 581px;
   padding: 0 15px;
