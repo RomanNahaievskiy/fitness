@@ -382,6 +382,7 @@ body {
         z-index: 2;
         @media (max-width: 991.98px) {
             flex: 1 1 auto;
+            padding: 0;
         }
 
         &:nth-child(2) {
