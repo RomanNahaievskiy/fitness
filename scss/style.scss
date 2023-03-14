@@ -23,6 +23,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     main {
         flex-basis: auto;
         flex-grow: 1;
@@ -532,7 +533,9 @@ body {
     @media (max-width: 500px) {
         font-size: 78px;
     }
-
+    @media (max-width: 420px) {
+        font-size: 60px;
+    }
     @media (max-width: 350px) {
         font-size: 55px;
     }

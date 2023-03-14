@@ -132,6 +132,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .wrapper main {
   flex-basis: auto;
@@ -590,6 +591,11 @@ body {
 @media (max-width: 500px) {
   .main-title {
     font-size: 78px;
+  }
+}
+@media (max-width: 420px) {
+  .main-title {
+    font-size: 60px;
   }
 }
 @media (max-width: 350px) {
