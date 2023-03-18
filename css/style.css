@@ -422,6 +422,27 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   padding: 0 70px;
+  position: relative;
+}
+.main-section__container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("/img/img-decor/dec-01.svg") 50% 12.76% no-repeat;
+}
+.main-section__container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -75%;
+  background: url("/img/img-decor/dec-02.svg") 0 0 no-repeat;
 }
 .main-section__columns {
   display: flex;
