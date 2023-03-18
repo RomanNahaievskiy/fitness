@@ -432,7 +432,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("/img/img-decor/dec-01.svg") 50% 12.76% no-repeat;
+  background: url("../img/img-decor/dec-01.svg") 50% 12.76% no-repeat;
 }
 .main-section__container::after {
   content: "";
@@ -442,7 +442,7 @@ body {
   height: 100%;
   top: 0;
   right: -75%;
-  background: url("/img/img-decor/dec-02.svg") 0 0 no-repeat;
+  background: url("../img/img-decor/dec-02.svg") 0 0 no-repeat;
 }
 .main-section__columns {
   display: flex;
