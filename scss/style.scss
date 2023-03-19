@@ -625,8 +625,21 @@ body {
         margin: 0 auto;
         padding-left: 15px;
         padding-right: 15px;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 160px;
+            height: 190px;
+            top: 300px;
+            left: -160.38px;
+            background: url("../img/img-decor/dec-03.svg") 0 0 no-repeat;
+        }
     }
-
+    &:not(:last-child) {
+        margin-bottom: 140px;
+    }
     // .partners__columns
 
     &__columns {
@@ -727,6 +740,190 @@ body {
         @media (max-width: 767.98px) {
             flex: 1 1 261px;
             height: 68px;
+        }
+    }
+}
+//========================================================================================================================================================
+// About us
+
+.about-us {
+    padding-bottom: 191px;
+    position: relative;
+    // .about-us__container
+    &::before {
+        content: "";
+        width: 82.5%; /* 1188/1440px */
+        height: calc(99% - 343px); /* 1436/1440 */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #ffe500;
+        opacity: 0.1;
+        border-radius: 0px 300px 0px 0px;
+    }
+
+    &__container {
+        max-width: 1340px;
+        padding: 0 15px;
+        margin: 0 auto;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 160px;
+            height: 190px;
+            bottom: -300px;
+            left: -80px;
+            background: url("../img/img-decor/dec-03.svg") 0 0 no-repeat;
+            z-index: 1;
+        }
+    }
+
+    // .about-us__columns
+
+    &__columns {
+        display: flex;
+        // column-gap: 85px;
+        align-items: end;
+        @media (max-width: 989.98px) {
+            flex-direction: column;
+            align-items: stretch;
+            row-gap: 50px;
+        }
+    }
+
+    // .about-us__item
+
+    &__item {
+        @media (max-width: 989.98px) {
+            flex: 1 1 auto;
+        }
+        &:first-child {
+            flex: 0 1 555px;
+            padding-left: 45px;
+            padding-right: 50px;
+            h2 {
+                &:first-child {
+                    padding-left: 40px;
+                }
+            }
+            p {
+                &:first-of-type {
+                    padding-left: 40px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &:last-child {
+            flex: 1 1 675px;
+            padding-left: 35px;
+            h2 {
+                &:first-child {
+                    max-width: 418px;
+                }
+            }
+            p {
+                &:first-of-type {
+                    max-width: 418px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        p {
+            &:not(:last-child) {
+                margin-bottom: 25.3px;
+            }
+        }
+    }
+
+    // .about-us__title
+
+    &__title {
+        font-size: 65px;
+        line-height: 1.26;
+        color: #313131;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .about-us__text
+
+    &__text {
+        font-size: 20px;
+        line-height: 1.25; /* 25px/20 */
+        color: #5f5f5f;
+    }
+
+    // .about-us__image
+
+    &__image {
+        position: relative;
+        &:not(:last-child) {
+            margin-bottom: 75px;
+        }
+
+        // .about-us__image_left-top-conor
+
+        &_left-top-conor {
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 22px;
+                left: -25px;
+                border: 1px solid #313131;
+                border-radius: 200px 0px 0px 0px;
+                z-index: 3;
+            }
+        }
+
+        // .about-us__image_right-bottom-conor
+
+        &_right-bottom-conor {
+            // margin-bottom: -70px;
+            transform: translateY(70px);
+            max-width: 586px;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 22px;
+                left: 25px;
+                border: 1px solid #313131;
+                border-radius: 0px 0px 200px 0px;
+                z-index: 3;
+            }
+        }
+    }
+    &__img-wrapper {
+        position: relative;
+        padding-bottom: 132.80943%; /* 676/509 */
+        margin-top: 75px;
+        overflow: hidden;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        // .img-wrapper__image_left-top-conor
+
+        &_left-top-conor {
+            border-radius: 200px 0px 0px 0px;
+        }
+
+        // .img-wrapper__image_right-bottom-conor
+
+        &_right-bottom-conor {
+            border-radius: 0px 0px 200px 0px;
         }
     }
 }
