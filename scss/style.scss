@@ -36,6 +36,7 @@ body {
 .button {
     font-size: 17px;
     line-height: 1.295; /* 22/17 */
+    white-space: nowrap;
     color: #fff;
     padding: 18px 35px;
     background: #313131;
@@ -61,6 +62,19 @@ body {
     &_alt {
         color: #313131;
         background-color: #e0e0e0;
+    }
+    &_outline {
+        span {
+            color: #313131;
+        }
+        background-color: transparent;
+        border: 1px solid #313131;
+        @media (any-hover: hover) {
+            &:hover {
+                border: 1px solid transparent;
+                transition: all 0.3s ease 0s;
+            }
+        }
     }
 }
 .logo {
@@ -749,6 +763,9 @@ body {
 .about-us {
     padding-bottom: 191px;
     position: relative;
+    &:not(:last-child) {
+        margin-bottom: 140px;
+    }
     // .about-us__container
     &::before {
         content: "";
@@ -925,6 +942,168 @@ body {
         &_right-bottom-conor {
             border-radius: 0px 0px 200px 0px;
         }
+    }
+}
+
+//========================================================================================================================================================
+// HOW IT WORKS
+
+.how-it-works {
+    font-family: "Circular Std";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #5f5f5f;
+    // .how-it-works__container
+
+    &__container {
+        // 1140 + 15 +15
+        max-width: 1170px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    // .how-it-works__columns
+
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        margin: 0 -20px;
+    }
+
+    // .how-it-works__column
+
+    &__column {
+        flex: 1 1 50%;
+        padding: 0 20px;
+    }
+
+    // .how-it-works__title
+
+    &__title {
+        font-size: 65px;
+        line-height: 82px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    // .how-it-works__text
+
+    &__text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 125%; /* 25px/20 */
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    // .how-it-works__actions
+
+    &__actions {
+        display: flex;
+        gap: 30px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        @media (max-width: 415px) {
+            flex-wrap: wrap;
+            justify-content: stretch;
+            & .button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    // .how-it-works__spoilers
+
+    &__spoilers {
+    }
+}
+.spollers {
+    // .spollers__item
+
+    &__item {
+        padding: 32px;
+        background-color: transparent;
+
+        border-radius: 10px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__item.active {
+        box-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
+        transition: all 0.3s ease 0s;
+    }
+
+    // .spollers__title
+
+    &__title {
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                width: 20px;
+                height: 1px;
+                background-color: #313131;
+                border-radius: 1px;
+            }
+            &::after {
+                transform: rotate(-90deg);
+                transition: all 0.3s ease 0s;
+            }
+        }
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 130%;
+        opacity: 0.88;
+        // &:not(:last-child) {
+        //     margin-bottom: 29px;
+        // }
+    }
+    &__item.active > &__title > span {
+        &::after {
+            transform: rotate(-180deg);
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    // .spollers__body
+
+    &__body {
+        // visibility: hidden;
+        font-size: 0;
+        opacity: 0;
+        height: 0;
+        font-size: 18px;
+        line-height: 23px;
+        color: #5f5f5f;
+        transition: opacity, padding 0.6s ease 0s;
+    }
+
+    &__item.active > &__body {
+        font-size: inherit;
+        padding-top: 29px;
+        // visibility: visible;
+        opacity: 1;
+        height: 100%;
+        transition: opacity 0.3s ease 0s;
     }
 }
 
