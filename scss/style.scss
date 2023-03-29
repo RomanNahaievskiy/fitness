@@ -136,6 +136,25 @@ a {
         }
     }
     &__background {
+        &_on-footer {
+            opacity: 1;
+            background: linear-gradient(
+                0deg,
+                rgba(255, 255, 255, 0.6474964985994398) 0%,
+                rgba(255, 255, 255, 0.8491771708683473) 23%,
+                rgba(255, 255, 255, 1) 100%
+            );
+            transition: all 0.3s ease 0s;
+            @media (any-hover: hover) {
+                &:hover {
+                    box-shadow: 0px 100px 80px rgba(49, 49, 49, 0.1),
+                        0px 64.8148px 46.8519px rgba(49, 49, 49, 0.0759259),
+                        0px 38.5185px 25.4815px rgba(49, 49, 49, 0.0607407), 0px 20px 13px rgba(49, 49, 49, 0.05),
+                        0px 8.14815px 6.51852px rgba(49, 49, 49, 0.0392593),
+                        0px 1.85185px 3.14815px rgba(49, 49, 49, 0.0240741);
+                }
+            }
+        }
         position: absolute;
         top: 0;
         left: 0;
@@ -146,9 +165,6 @@ a {
         opacity: 0;
         @media (max-width: 767.89px) {
             opacity: 1;
-        }
-
-        @media (max-width: 767.89px) {
             position: absolute;
             top: 0;
             left: 0;
@@ -156,10 +172,6 @@ a {
             height: 72px;
             z-index: 2;
             background-color: #fff;
-            &._active {
-                background-color: #fff;
-                transition: all 0.1s ease 0s;
-            }
         }
     }
 
