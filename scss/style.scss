@@ -98,33 +98,25 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    transition: all 0.3s ease 0s;
     &__background {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 86px;
+        height: 94px;
         z-index: 2;
-        background-color: #fff;
+        // background-color: #fff;
     }
     @media (max-width: 767px) {
-        &::before {
-            // content: "";
-            // display: block;
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 100%;
-            // height: 86px;
-            // z-index: 2;
-            // background-color: transparent;
-        }
+        padding-top: 8px;
+        padding-bottom: 8px;
         &__background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 86px;
+            height: 72px;
             z-index: 2;
             background-color: #fff;
         }
@@ -191,6 +183,13 @@ body {
         @media (min-width: 767px) {
             flex: 1 0 235px;
         }
+    }
+}
+.header._scroll-down {
+    @media (max-width: 767.89px) {
+        top: -100%;
+        left: 0;
+        transition: all 2.3s ease 0s;
     }
 }
 .menu {
