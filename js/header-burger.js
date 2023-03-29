@@ -11,57 +11,12 @@ window.addEventListener('click', function (e) {
     }
     if (e.target.closest('.lock')) {
         // тут краще додати клас для підложки а вже в scss прописати ці стилі для нього
-        headerBackground.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 86px;
-        z-index: 2;
-        background-color: #fff;
-        transition: all 0.1s ease 0s;
-        
-        `;
+        headerBackground.classList.add('_active');
     } else {
-        headerBackground.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 86px;
-        z-index: 2;
-        background-color: transparent;
-        transition: all 0.6s ease 0s;
-        `;
+        headerBackground.classList.remove('_active');
     }
 })
-// заготовка до прозорого фону , коли миша на  хедері ще потрібні правки
-window.addEventListener('mouseover', function (e) {
-    if (e.target.closest('.header')) {
-        headerBackground.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 94px;
-        z-index: 2;
-        background-color: #ffffffaa;
-        transition: all 0.1s ease 0s;
-        
-        `;
-    } else {
-        headerBackground.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 94px;
-        z-index: 2;
-        background-color: transparent;
-        transition: all 0.6s ease 0s;
-                `;
-    }
-})
+
 //========================================================================================================================================================
 //SCROLL event
 
