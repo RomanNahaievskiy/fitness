@@ -1468,6 +1468,16 @@ a {
   color: #fff;
   background-color: #313131;
 }
+.footer a {
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .footer a:hover {
+    text-decoration: underline;
+    transition: all 0.3s ease 0s;
+  }
+}
 .footer__container {
   max-width: 1230px;
   margin: 0 auto;
