@@ -1561,7 +1561,7 @@ a {
     text-align: center;
   }
 }
-.info-footer .logo {
+.info-footer .logo a {
   color: #fff;
 }
 .info-footer .logo:not(:last-child) {
@@ -1575,6 +1575,10 @@ a {
     grid-column-end: 4;
     justify-self: center;
     text-align: center;
+  }
+  .info-footer .main-info .logo {
+    text-align: center;
+    margin: 0 auto;
   }
 }
 @media (max-width: 399.98px) {

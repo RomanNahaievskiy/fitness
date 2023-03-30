@@ -1723,7 +1723,9 @@ a {
         }
     }
     .logo {
-        color: #fff;
+        a {
+            color: #fff;
+        }
         &:not(:last-child) {
             margin-bottom: 32.22px;
         }
@@ -1738,6 +1740,10 @@ a {
     }
     .main-info {
         @media (max-width: 767.98px) {
+            & .logo {
+                text-align: center;
+                margin: 0 auto;
+            }
             grid-row-start: 1;
             grid-row-end: 1;
             grid-column-start: 1;
