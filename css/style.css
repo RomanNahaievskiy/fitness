@@ -483,7 +483,6 @@ a {
 }
 .main-section__container {
   max-width: 1340px;
-  padding: 0 15px;
   margin: 0 auto;
   padding: 0 70px;
   position: relative;
@@ -507,6 +506,11 @@ a {
   top: 0;
   right: -75%;
   background: url("../img/img-decor/dec-02.svg") 0 0 no-repeat;
+}
+@media (max-width: 1000px) {
+  .main-section__container {
+    padding: 0 15px;
+  }
 }
 .main-section__columns {
   display: flex;
