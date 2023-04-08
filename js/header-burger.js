@@ -63,4 +63,32 @@ window.addEventListener('scroll', (e) => {
     console.log(startPosFooter);
 })
 
+// реалізація скролу
+// Отримуємо колекцію елементів із датаатрибутами щодо скролу 
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if (menuLinks.length > 0) { // Якщо елементи в колекції чи масиві присутні , тобто якщо знайдені на сторінці елементи із вищезгаданим атрибутом
+    menuLinks.forEach(elemenuLink => {
+        menuLink.addEventListener('click', onMenuLinkClick);
+    });
+    function onMenuLinkClick(e) {
+        const menuLink = e.target; // елемент на якому спрацювала подія ()
+        if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) { // Якщо елемент має не пусте значення атрибута goto та якщо документ має адресований елемент (блок на який посилається)
+            const gotoBlock = document.querySelector(menuLink.dataset.goto);// отримуємо блок на який посилається активний  пункт меню
 
+            // Отримуємо значення піксел = {відстань від верху сторінки шуканого блоку + кількість прокрутки (тобто теперішнє положення) - висота шапки (для якісного відображення контенту ,
+            //  щоб шапка не закривала адже вона фіксована)}
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector("header").offsetheight;
+
+
+            // Нижче код що прокручує до потрібного блоку :
+
+            window.scrollTo({
+                top: gotoBlockValue,
+                behavior: "smooth" // плавна прокрутка
+            });
+            // для відключення роботи html посилань за href :
+            e.preventDafault();
+
+        }
+    }
+}

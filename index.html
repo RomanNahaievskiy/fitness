@@ -27,10 +27,14 @@
                     <button type="button" data-burger-menu class="menu__icon icon-menu"><span></span></button>
                     <nav class="menu__body">
                         <ul class="menu__list">
-                            <li class="menu__item"><a href="#home" class="menu__link">Home</a></li>
-                            <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
-                            <li class="menu__item"><a href="#testimonials" class="menu__link">Testimonials</a></li>
-                            <li class="menu__item"><a href="#contact" class="menu__link">Contact</a></li>
+                            <li class="menu__item"><a data-goto=".main-section" href="#home" class="menu__link">Home</a>
+                            </li>
+                            <li class="menu__item"><a data-goto=".about-us" href="#about" class="menu__link">About</a>
+                            </li>
+                            <li class="menu__item"><a data-goto=".how-it-works" href="#testimonials"
+                                    class="menu__link">Testimonials</a></li>
+                            <li class="menu__item"><a data-goto=".footer__info" href="#contact"
+                                    class="menu__link">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
