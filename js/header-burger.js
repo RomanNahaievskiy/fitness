@@ -38,7 +38,7 @@ window.addEventListener('scroll', (e) => {
     let lastScroll = arrScroll[1];
 
 
-    // отримую координати футерв для коректного відображення шапки
+    // отримую координати футера для коректного відображення шапки
     const startPosFooter = footerEl.getBoundingClientRect().top
     if (startPosFooter < 100) {
         headerBackground.classList.add('header__background_on-footer');
@@ -60,34 +60,55 @@ window.addEventListener('scroll', (e) => {
         header.classList.remove('_scroll-down');
     }
 
-    console.log(startPosFooter);
+
 })
 
 // реалізація скролу
+// спроба через асинхронну функцію 
+// async function scrollByLink(gotoBlockValue) {
+//     console.log('working async function')
+//     window.scrollTo({
+//         top: gotoBlockValue,
+//         behavior: "smooth"
+//     });
+// }
 // Отримуємо колекцію елементів із датаатрибутами щодо скролу 
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) { // Якщо елементи в колекції чи масиві присутні , тобто якщо знайдені на сторінці елементи із вищезгаданим атрибутом
-    menuLinks.forEach(elemenuLink => {
+    menuLinks.forEach(menuLink => {
         menuLink.addEventListener('click', onMenuLinkClick);
     });
     function onMenuLinkClick(e) {
         const menuLink = e.target; // елемент на якому спрацювала подія ()
+
         if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) { // Якщо елемент має не пусте значення атрибута goto та якщо документ має адресований елемент (блок на який посилається)
+            // для відключення роботи html посилань за href :
+            e.preventDefault();
             const gotoBlock = document.querySelector(menuLink.dataset.goto);// отримуємо блок на який посилається активний  пункт меню
 
             // Отримуємо значення піксел = {відстань від верху сторінки шуканого блоку + кількість прокрутки (тобто теперішнє положення) - висота шапки (для якісного відображення контенту ,
             //  щоб шапка не закривала адже вона фіксована)}
-            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector("header").offsetheight;
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - 2 * document.querySelector(".header").offsetHeight;
+            // console.log(gotoBlock.getBoundingClientRect().top);
+            // console.log(scrollY);
+            // console.log(document.querySelector(".header").offsetHeight);
+            // console.log(gotoBlockValue);
+            // console.log(e.target)
 
+            // fix для мобільного меню
+            menuBodyEl.classList.toggle('menu__body_active');
+            document.body.classList.toggle('lock');
 
             // Нижче код що прокручує до потрібного блоку :
+            // scrollByLink(gotoBlockValue); 
 
             window.scrollTo({
                 top: gotoBlockValue,
-                behavior: "smooth" // плавна прокрутка
+                behavior: "smooth"
             });
-            // для відключення роботи html посилань за href :
-            e.preventDafault();
+
+
+
 
         }
     }

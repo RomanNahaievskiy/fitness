@@ -115,6 +115,10 @@ h6 {
   font-display: swap;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   font-size: 16px;
